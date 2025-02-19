@@ -18,6 +18,7 @@ df_segtruck = df[df['empresa']=='Segtruck'].drop_duplicates(subset=['cliente'], 
 clientes_seg = len(df_segtruck)
 clientes_st = len(df_stcoop)
 clientes_via = len(df_viavante)
+clientes_geral = clientes_seg + clientes_st + clientes_via
 
 def enviar_email():
 
@@ -40,7 +41,8 @@ def enviar_email():
 
    <b>SEGTRUCK: {clientes_seg}</b><br>
     <b>STCOOP: {clientes_st}</b><br>
-    <b>VIAVANTE: {clientes_via}</b>
+    <b>VIAVANTE: {clientes_via}</b><br>
+    <b>TOTAL: {clientes_geral}</b>
 
     <p>Atenciosamente,</p>
 
